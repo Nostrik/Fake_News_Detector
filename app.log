@@ -1,0 +1,244 @@
+2026-01-08 02:03:39,847 [INFO] __main__: Start..
+2026-01-08 02:03:39,847 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 02:03:40,213 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 02:03:40,714 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 02:03:40,740 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 02:03:41,242 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 02:03:41,243 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 02:03:41,244 [DEBUG] src.feature_extraction: Длина x_train перед векторизацией: 5068
+2026-01-08 02:03:41,266 [DEBUG] src.feature_extraction: Первые 3 элемента x_train:       Unnamed: 0                                              title                                               text label
+471         5060  'America is already strong': Obama continues D...  President Obama offered enthusiastic support f...  REAL
+4825        6564  Podesta relative earned six-figure fees lobbyi...  This is how it works in the Clinton Cabal...or...  FAKE
+6166        8231  Bitcoin Soars As China Launches Crackdown On W...    Bitcoin Soars As China Launches Crackdown On...  FAKE
+2026-01-08 02:03:41,275 [INFO] src.feature_extraction: Vectorization complete. Dict size: 4 words.
+2026-01-08 02:03:41,777 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-08 02:03:41,789 [ERROR] src.model: Error during model training: Found input variables with inconsistent numbers of samples: [4, 5068]
+2026-01-08 02:03:41,791 [ERROR] __main__: Критическая ошибка в пайплайне: Found input variables with inconsistent numbers of samples: [4, 5068]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 40, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 48, in train_passive_aggressive
+    model.fit(x_train, y_train)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_passive_aggressive.py", line 331, in fit
+    return self._fit(
+           ^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 715, in _fit
+    self._partial_fit(
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 609, in _partial_fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 1333, in check_X_y
+    check_consistent_length(X, y)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [4, 5068]
+2026-01-08 02:03:41,843 [INFO] __main__: End
+2026-01-08 10:34:47,775 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:34:48,079 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:34:48,580 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:34:48,617 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:34:49,119 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:34:49,120 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:34:49,122 [DEBUG] src.feature_extraction: Длина x_train перед векторизацией: 5068
+2026-01-08 10:34:49,138 [DEBUG] src.feature_extraction: Первые 3 элемента x_train:       Unnamed: 0                                              title                                               text label
+471         5060  'America is already strong': Obama continues D...  President Obama offered enthusiastic support f...  REAL
+4825        6564  Podesta relative earned six-figure fees lobbyi...  This is how it works in the Clinton Cabal...or...  FAKE
+6166        8231  Bitcoin Soars As China Launches Crackdown On W...    Bitcoin Soars As China Launches Crackdown On...  FAKE
+2026-01-08 10:34:49,148 [INFO] src.feature_extraction: Vectorization complete. Dict size: 4 words.
+2026-01-08 10:34:49,649 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-08 10:34:49,656 [ERROR] src.model: Error during model training: Found input variables with inconsistent numbers of samples: [4, 5068]
+2026-01-08 10:34:49,656 [ERROR] __main__: Критическая ошибка в пайплайне: Found input variables with inconsistent numbers of samples: [4, 5068]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 40, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 48, in train_passive_aggressive
+    model.fit(x_train, y_train)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_passive_aggressive.py", line 331, in fit
+    return self._fit(
+           ^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 715, in _fit
+    self._partial_fit(
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 609, in _partial_fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 1333, in check_X_y
+    check_consistent_length(X, y)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [4, 5068]
+2026-01-08 10:34:49,689 [INFO] __main__: End
+2026-01-08 10:38:39,553 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:38:39,839 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:38:40,348 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:38:40,369 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:38:40,877 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:38:40,879 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:38:40,880 [DEBUG] src.feature_extraction: Длина x_train перед векторизацией: 5068
+2026-01-08 10:38:40,895 [DEBUG] src.feature_extraction: Первые 3 элемента x_train:       Unnamed: 0                                              title                                               text label
+471         5060  'America is already strong': Obama continues D...  President Obama offered enthusiastic support f...  REAL
+4825        6564  Podesta relative earned six-figure fees lobbyi...  This is how it works in the Clinton Cabal...or...  FAKE
+6166        8231  Bitcoin Soars As China Launches Crackdown On W...    Bitcoin Soars As China Launches Crackdown On...  FAKE
+2026-01-08 10:38:40,897 [ERROR] src.feature_extraction: Vectorization error: sparse array length is ambiguous; use getnnz() or shape[0]
+2026-01-08 10:38:40,898 [ERROR] __main__: Критическая ошибка в пайплайне: sparse array length is ambiguous; use getnnz() or shape[0]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 36, in run_pipeline
+    tfidf_train, tfidf_test, _ = vectorize_data(x_train, x_test, vectorizer)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\feature_extraction.py", line 123, in vectorize_data
+    logger.debug(f"{len(tfidf_train)}")
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\scipy\sparse\_base.py", line 449, in __len__
+    raise TypeError("sparse array length is ambiguous; use getnnz()"
+TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+2026-01-08 10:38:40,928 [INFO] __main__: End
+2026-01-08 10:39:54,460 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:39:54,741 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:39:55,247 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:39:55,277 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:39:55,778 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:39:55,780 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:39:55,781 [DEBUG] src.feature_extraction: Длина x_train перед векторизацией: 5068
+2026-01-08 10:39:55,792 [DEBUG] src.feature_extraction: Первые 3 элемента x_train:       Unnamed: 0                                              title                                               text
+471         5060  'America is already strong': Obama continues D...  President Obama offered enthusiastic support f...
+4825        6564  Podesta relative earned six-figure fees lobbyi...  This is how it works in the Clinton Cabal...or...
+6166        8231  Bitcoin Soars As China Launches Crackdown On W...    Bitcoin Soars As China Launches Crackdown On...
+2026-01-08 10:39:55,804 [ERROR] src.feature_extraction: Vectorization error: sparse array length is ambiguous; use getnnz() or shape[0]
+2026-01-08 10:39:55,809 [ERROR] __main__: Критическая ошибка в пайплайне: sparse array length is ambiguous; use getnnz() or shape[0]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 36, in run_pipeline
+    tfidf_train, tfidf_test, _ = vectorize_data(x_train, x_test, vectorizer)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\feature_extraction.py", line 123, in vectorize_data
+    logger.debug(f"{len(tfidf_train)}")
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\scipy\sparse\_base.py", line 449, in __len__
+    raise TypeError("sparse array length is ambiguous; use getnnz()"
+TypeError: sparse array length is ambiguous; use getnnz() or shape[0]
+2026-01-08 10:39:55,837 [INFO] __main__: End
+2026-01-08 10:44:43,009 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:44:43,292 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:44:43,795 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:44:43,813 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:44:44,321 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:44:44,323 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:44:44,324 [DEBUG] src.feature_extraction: Длина x_train перед векторизацией: 5068
+2026-01-08 10:44:44,332 [DEBUG] src.feature_extraction: Первые 3 элемента x_train: 471     President Obama offered enthusiastic support f...
+4825    This is how it works in the Clinton Cabal...or...
+6166      Bitcoin Soars As China Launches Crackdown On...
+Name: text, dtype: object
+2026-01-08 10:44:48,221 [DEBUG] src.feature_extraction: tfidf_train shape: (5068, 61469)
+2026-01-08 10:44:49,108 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 10:44:49,613 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-08 10:44:49,665 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 10:44:50,178 [INFO] src.model: Running model evaluation...
+2026-01-08 10:44:50,215 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 10:44:50,726 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 10:44:50,765 [INFO] __main__: End
+2026-01-08 10:50:06,653 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:50:06,944 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:50:07,449 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:50:07,468 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:50:07,977 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:50:07,978 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:50:12,801 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 10:50:13,305 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-08 10:50:13,388 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 10:50:13,889 [INFO] src.model: Running model evaluation...
+2026-01-08 10:50:13,923 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 10:50:14,435 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 10:50:14,483 [INFO] __main__: End
+2026-01-08 10:56:27,793 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 10:56:28,074 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 10:56:28,580 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 10:56:28,595 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 10:56:29,106 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 10:56:29,107 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 10:56:33,884 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 10:56:34,385 [INFO] src.model: Start training SGDClassifier (PA-I): max_iter=50, eta0=1.0
+2026-01-08 10:56:34,447 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 10:56:34,960 [INFO] src.model: Running model evaluation...
+2026-01-08 10:56:34,978 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 10:56:35,486 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 10:56:35,539 [INFO] __main__: End
+2026-01-08 11:13:25,588 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 11:13:25,894 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 11:13:26,396 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 11:13:26,409 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 11:13:26,909 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 11:13:26,910 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 11:13:31,697 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 11:13:32,198 [INFO] src.model: Start training SGDClassifier (PA-I): max_iter=50, eta0=1.0
+2026-01-08 11:13:32,257 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 11:13:32,761 [INFO] src.model: Running model evaluation...
+2026-01-08 11:13:32,788 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 11:13:32,790 [INFO] __main__: Точность модели (accuracy): 0.941594317284925
+2026-01-08 11:13:33,291 [INFO] src.evaluation: Building confusion matrix plot...
+2026-01-08 11:13:35,413 [INFO] src.evaluation: Confusion matrix saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\confusion_matrix_fake_news.png
+2026-01-08 11:13:54,675 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 11:13:54,701 [INFO] __main__: End
+2026-01-08 11:14:36,873 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 11:14:37,174 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 11:14:37,676 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 11:14:37,702 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 11:14:38,203 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 11:14:38,204 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 11:14:43,029 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 11:14:43,531 [INFO] src.model: Start training SGDClassifier (PA-I): max_iter=50, eta0=1.0
+2026-01-08 11:14:43,595 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 11:14:44,100 [INFO] src.model: Running model evaluation...
+2026-01-08 11:14:44,125 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 11:14:44,126 [INFO] __main__: Точность модели (accuracy): 94.16
+2026-01-08 11:14:44,627 [INFO] src.evaluation: Building confusion matrix plot...
+2026-01-08 11:14:44,995 [INFO] src.evaluation: Confusion matrix saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\confusion_matrix_fake_news.png
+2026-01-08 11:14:48,438 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 11:14:48,467 [INFO] __main__: End
+2026-01-08 11:23:30,278 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 11:23:30,579 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 11:23:31,080 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 11:23:31,107 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 11:23:31,609 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 11:23:31,610 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 11:23:36,471 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 11:23:36,972 [INFO] src.model: Start training SGDClassifier (PA-I): max_iter=50, eta0=1.0
+2026-01-08 11:23:37,046 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 11:23:37,550 [INFO] src.model: Running model evaluation...
+2026-01-08 11:23:37,575 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 11:23:37,576 [INFO] __main__: Точность модели (accuracy): 94.16
+2026-01-08 11:23:38,078 [INFO] src.evaluation: Building confusion matrix plot...
+2026-01-08 11:23:38,428 [INFO] src.evaluation: Confusion matrix saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\confusion_matrix_fake_news.png
+2026-01-08 11:23:39,942 [INFO] src.evaluation: Building class distribution plot...
+2026-01-08 11:23:40,193 [INFO] src.evaluation: Class distribution plot saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\class_distribution_train.png
+2026-01-08 11:23:49,654 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 11:23:49,681 [INFO] __main__: End
+2026-01-08 11:27:17,136 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-08 11:27:17,434 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-08 11:27:17,935 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-08 11:27:17,961 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-08 11:27:18,464 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-08 11:27:18,464 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-08 11:27:23,386 [INFO] src.feature_extraction: Vectorization complete. Dict size: 61469 words.
+2026-01-08 11:27:23,887 [INFO] src.model: Start training SGDClassifier (PA-I): max_iter=50, eta0=1.0
+2026-01-08 11:27:23,973 [INFO] src.model: The model is trained. Iterations completed: 8
+2026-01-08 11:27:24,477 [INFO] src.model: Running model evaluation...
+2026-01-08 11:27:24,504 [INFO] src.model: Accuracy: 0.9416
+2026-01-08 11:27:24,505 [INFO] __main__: Точность модели (accuracy): 94.16
+2026-01-08 11:27:25,007 [INFO] src.evaluation: Building confusion matrix plot...
+2026-01-08 11:27:25,364 [INFO] src.evaluation: Confusion matrix saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\confusion_matrix_fake_news.png
+2026-01-08 11:27:28,394 [INFO] src.evaluation: Building class distribution plot...
+2026-01-08 11:27:28,639 [INFO] src.evaluation: Class distribution plot saved to: C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\results\figures\class_distribution_train.png
+2026-01-08 11:27:30,620 [INFO] __main__: Пайплайн успешно завершен.
+2026-01-08 11:27:30,653 [INFO] __main__: End

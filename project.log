@@ -1,0 +1,113 @@
+2026-01-07 23:30:29 [INFO] __main__: Загрузка данных из news_dataset.csv
+2026-01-07 23:30:29 [ERROR] __main__: Файл news_dataset.csv не найден.
+2026-01-07 23:32:43 [INFO] __main__: Start..
+2026-01-07 23:32:43 [INFO] __main__: Загрузка данных из news_dataset.csv
+2026-01-07 23:32:43 [ERROR] __main__: Файл news_dataset.csv не найден.
+2026-01-07 23:32:43 [INFO] __main__: End
+2026-01-07 23:34:02 [INFO] __main__: Start..
+2026-01-07 23:34:02 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-07 23:34:02 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-07 23:34:02 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-07 23:34:02 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-07 23:34:02 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-07 23:34:02 [INFO] src.feature_extraction: Vectorization complete. Dict size: 3 words.
+2026-01-07 23:34:02 [ERROR] __main__: Критическая ошибка в пайплайне: name 'C' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 37, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 36, in train_passive_aggressive
+    logger.info(f"Start training PAC: max_iter={max_iter}, C={C}")
+                                                              ^
+NameError: name 'C' is not defined
+2026-01-07 23:34:02 [INFO] __main__: End
+2026-01-07 23:36:16 [INFO] __main__: Start..
+2026-01-07 23:36:16 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-07 23:36:17 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-07 23:36:17 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-07 23:36:17 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-07 23:36:17 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-07 23:36:17 [INFO] src.feature_extraction: Vectorization complete. Dict size: 3 words.
+2026-01-07 23:36:17 [ERROR] __main__: Критическая ошибка в пайплайне: name 'с' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 37, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 36, in train_passive_aggressive
+    logger.info(f"Start training PAC: max_iter={max_iter}, C={с}")
+                                                              ^
+NameError: name 'с' is not defined
+2026-01-07 23:36:17 [INFO] __main__: End
+2026-01-07 23:36:29 [INFO] __main__: Start..
+2026-01-07 23:36:29 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-07 23:36:29 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-07 23:36:29 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-07 23:36:29 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-07 23:36:29 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-07 23:36:29 [INFO] src.feature_extraction: Vectorization complete. Dict size: 3 words.
+2026-01-07 23:36:29 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-07 23:36:29 [ERROR] src.model: Error during model training: Found input variables with inconsistent numbers of samples: [3, 5068]
+2026-01-07 23:36:29 [ERROR] __main__: Критическая ошибка в пайплайне: Found input variables with inconsistent numbers of samples: [3, 5068]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 37, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 48, in train_passive_aggressive
+    model.fit(x_train, y_train)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_passive_aggressive.py", line 331, in fit
+    return self._fit(
+           ^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 715, in _fit
+    self._partial_fit(
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 609, in _partial_fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 1333, in check_X_y
+    check_consistent_length(X, y)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [3, 5068]
+2026-01-07 23:36:29 [INFO] __main__: End
+2026-01-07 23:43:41 [INFO] __main__: Start..
+2026-01-07 23:43:41 [INFO] __main__: Загрузка данных из C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\data\fake_news.csv
+2026-01-07 23:43:42 [INFO] src.preprocessing: Dataset loaded successfully
+2026-01-07 23:43:42 [INFO] src.feature_extraction: Split data: test_size=0.2, random_state=42
+2026-01-07 23:43:42 [INFO] src.feature_extraction: Training size: 5068, test: 1267
+2026-01-07 23:43:43 [INFO] src.feature_extraction: Init TfidfVectorizer: max_df=0.7, stop_words=english
+2026-01-07 23:43:43 [INFO] src.feature_extraction: Beginning of text vectorization...
+2026-01-07 23:43:43 [INFO] src.feature_extraction: Vectorization complete. Dict size: 3 words.
+2026-01-07 23:43:43 [INFO] src.model: Start training PAC: max_iter=50, C=1.0
+2026-01-07 23:43:43 [ERROR] src.model: Error during model training: Found input variables with inconsistent numbers of samples: [3, 5068]
+2026-01-07 23:43:43 [ERROR] __main__: Критическая ошибка в пайплайне: Found input variables with inconsistent numbers of samples: [3, 5068]
+Traceback (most recent call last):
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\main.py", line 41, in run_pipeline
+    model = train_passive_aggressive(tfidf_train, y_train, max_iter=50)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\Documents\Pydev\Detecting fake news\fake_news_detection\src\model.py", line 48, in train_passive_aggressive
+    model.fit(x_train, y_train)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_passive_aggressive.py", line 331, in fit
+    return self._fit(
+           ^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 715, in _fit
+    self._partial_fit(
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\linear_model\_stochastic_gradient.py", line 609, in _partial_fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 1333, in check_X_y
+    check_consistent_length(X, y)
+  File "C:\Users\Maksim\AppData\Local\pypoetry\Cache\virtualenvs\fake-news-detection-ver1-nhPfB83o-py3.11\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [3, 5068]
+2026-01-07 23:43:43 [INFO] __main__: End
